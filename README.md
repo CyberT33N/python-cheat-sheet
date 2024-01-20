@@ -23,7 +23,7 @@ sudo apt-get install python3.8 python3-pip
 
 ### Python Latest
 ```
-sudo apt install python3
+sudo apt install python3 python3-pip
 ```
 
 
