@@ -74,6 +74,8 @@ sudo apt install python3-pip
 
 
 
+
+
 <br><br>
 ______________________________________
 ______________________________________
@@ -81,6 +83,7 @@ ______________________________________
 
 
 # pytorch
+- https://pytorch.org/get-started/locally/
 - PyTorch ist eine mächtige Open-Source-Maschinenlernbibliothek, die von Facebook AI entwickelt wurde. Sie wird besonders für die Implementierung von Deep-Learning-Modellen genutzt. PyTorch bietet dynamisches Rechendefinieren, was bedeutet, dass du Modelle erstellen und ändern kannst, während sie ausgeführt werden.
 
 <br><br>
@@ -91,6 +94,7 @@ ______________________________________
 
 ### Ubuntu
 ```shell
+- pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 
 
@@ -123,3 +127,116 @@ python3 <filename>.py
 
 
 
+
+
+
+
+
+
+
+
+
+
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+# FAQ
+
+## Error "This environment is externally managed"
+- https://askubuntu.com/a/1469197/1461683
+    
+    There's a good article on OMGUbuntu about this: [3 Ways to Solve Pip Install Error on Ubuntu 23.04][1]
+    
+    Here's the summary. There are three ways to approach this problem:
+    
+    # 1. Use a repo version
+    
+    For instance, if you want to install the `requests` Python library, you can install it using APT instead, like this:
+    
+        sudo apt install python3-requests
+    
+    This will install this library system-wide.
+    
+    Not all packages available on PyPI have been packaged and included in the Debian/Ubuntu repositories, so this method won't work for some packages.
+    
+    # Or: 2. Create a virtual environment using `venv` or `virtualenv`
+    
+    Make sure `venv` is installed by running:
+    
+        sudo apt install python3-venv
+    
+    To create a new virtual environment in a directory named `env`, run:
+    
+        python3 -m venv env
+    
+    To activate this virtual environment (which modifies the `PATH` environment variable), run this:
+    
+        source env/bin/activate
+    
+    Now you can install a library like `requests` in this virtual environment:
+    
+        pip install requests
+    
+    The files will get installed under the `env/` directory.
+    
+    If you want to leave the virtual environment, you can run:
+    
+        deactivate
+    
+    If you don't want to run `source env/bin/activate` and `deactivate`, then you can run the executable by prefixing its path, like this:
+    
+         $ env/bin/pip install requests
+         $ env/bin/python3
+         >>> import request
+         >>> help(requests)
+    
+    # Or: 3. Use `pipx`
+    
+    [pipx][2] lets you install and run Python applications in isolated environments. This is the recommend way to install PyPI packages that represent command-line applications.
+    
+    To install pipx, run:
+    
+         sudo apt install pipx
+    
+    pipx needs `~/.local/bin/` to be in your PATH. You can automatically modify your shell configuration (such as `~/.bashrc`) to modify PATH appropriately by running:
+    
+         pipx ensurepath
+    
+    Now you can install a package from PyPI, like this:
+    
+         pipx install pycowsay
+    
+    And you can run the command that you just installed, like this:
+    
+    ```
+    $ pycowsay Mooo!
+    
+      -----
+    < Mooo! >
+      -----
+       \   ^__^
+        \  (oo)\_______
+           (__)\       )\/\
+               ||----w |
+               ||     ||
+    ```
+    
+    As you can see, pipx installed a symlink in `~/.local/bin/` to the executable in a virtual environment:
+    
+    ```
+    $ ls -l ~/.local/bin/pycowsay
+    lrwxrwxrwx 1 flimm flimm 50 May 24 11:19 /home/flimm/.local/bin/pycowsay -> /home/flimm/.local/pipx/venvs/pycowsay/bin/pycowsay*
+    ```
+    
+    # Or: 4. Pass `--break-system-packages` flag:
+    
+    If you want to ignore the warning, you can pass the `--break-system-packages` flag:
+    
+        pip install --break-system-packages --user <foobar>
+    
+    This method is not recommended, because you may find yourself with mysterious broken installations of Python packages months or years later, after you've forgotten that you used `--break-system-packages` and installed other conflicting Python packages.
+    
+      [1]: https://www.omgubuntu.co.uk/2023/04/pip-install-error-externally-managed-environment-fix
+      [2]: https://pypa.github.io/pipx/
