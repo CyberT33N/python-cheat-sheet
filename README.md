@@ -11,19 +11,11 @@ Python Cheat Sheet with the most needed stuff..
 
 ## Ubuntu 23.04
 
-<br><br>
-
-### Python 3.8
-```
-sudo apt-get update
-sudo apt-get install python3.8 python3-pip
-```
-
 ### Python 3.9 - Using pyenv
 - https://github.com/CyberT33N/python-cheat-sheet/?tab=readme-ov-file#install-3
 ```
 sudo apt-get update
-sudo apt-get install python3-pip libbz2-dev ibncurses5-dev libffi-dev libreadline-dev libssl-dev
+sudo apt-get install python3-pip libbz2-dev ibncurses5-dev libffi-dev libreadline-dev libssl-dev libsqlite3-dev tk-dev liblzma-dev
 
 pyenv install 3.9
 ```
