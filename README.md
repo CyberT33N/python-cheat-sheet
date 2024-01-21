@@ -278,12 +278,84 @@ python src/webui.py
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 ______________________________________
 ______________________________________
 <br><br>
 
 # Machine Learning
+
+## GPU
+- https://cloud.google.com/compute/gpus-pricing#gpu-pricing
+
+### Using Consumer GPUs for Deep Learning
+```
+While consumer GPUs are not suitable for large-scale deep learning projects, these processors can provide a good entry point for deep learning. Consumer GPUs can also be a cheaper supplement for less complex tasks, such as model planning or low-level testing. However, as you scale up, you’ll want to consider data center grade GPUs and high-end deep learning systems like NVIDIA’s DGX series (learn more in the following sections).
+
+In particular, the Titan V has been shown to provide performance similar to datacenter-grade GPUs when it comes to Word RNNs. Additionally, its performance for CNNs is only slightly below higher tier options. The Titan RTX and RTX 2080 Ti aren’t far behind.
+
+NVIDIA Titan V
+
+The Titan V is a PC GPU that was designed for use by scientists and researchers. It is based on NVIDIA’s Volta technology and includes Tensor Cores. The Titan V comes in Standard and CEO Editions.
+
+The Standard edition provides 12GB memory, 110 teraflops performance, a 4.5MB L2 cache, and 3,072-bit memory bus. The CEO edition provides 32GB memory and 125 teraflops performance, 6MB cache, and 4,096-bit memory bus. The latter edition also uses the same 8-Hi HBM2 memory stacks that are used in the 32GB Tesla units.
+
+NVIDIA Titan RTX
+
+The Titan RTX is a PC GPU based on NVIDIA’s Turing GPU architecture that is designed for creative and machine learning workloads. It includes Tensor Core and RT Core technologies to enable ray tracing and accelerated AI.
+
+Each Titan RTX provides 130 teraflops, 24GB GDDR6 memory, 6MB cache, and 11 GigaRays per second. This is due to 72 Turing RT Cores and 576 multi-precision Turing Tensor Cores.
+
+NVIDIA GeForce RTX 2080 Ti
+
+The GeForce RTX 2080 Ti is a PC GPU designed for enthusiasts. It is based on the TU102 graphics processor. Each GeForce RTX 2080 Ti provides 11GB of memory, a 352-bit memory bus, a 6MB cache, and roughly 120 teraflops of performance.
+```
+
+### Best Deep Learning GPUs for Large-Scale Projects and Data Centers
+```
+The following are GPUs recommended for use in large-scale AI projects.
+
+NVIDIA Tesla A100
+
+The A100 is a GPU with Tensor Cores that incorporates multi-instance GPU (MIG) technology. It was designed for machine learning, data analytics, and HPC.
+
+The Tesla A100 is meant to be scaled to up to thousands of units and can be partitioned into seven GPU instances for any size workload. Each Tesla A100 provides up to 624 teraflops performance, 40GB memory, 1,555 GB memory bandwidth, and 600GB/s interconnects.
+
+NVIDIA Tesla V100
+
+The NVIDIA Tesla V100 is a Tensor Core enabled GPU that was designed for machine learning, deep learning, and high performance computing (HPC). It is powered by NVIDIA Volta technology, which supports tensor core technology, specialized for accelerating common tensor operations in deep learning. Each Tesla V100 provides 149 teraflops of performance, up to 32GB memory, and a 4,096-bit memory bus.
+
+NVIDIA Tesla P100
+
+The Tesla P100 is a GPU based on an NVIDIA Pascal architecture that is designed for machine learning and HPC. Each P100 provides up to 21 teraflops of performance, 16GB of memory, and a 4,096-bit memory bus.
+
+NVIDIA Tesla K80
+
+The Tesla K80 is a GPU based on the NVIDIA Kepler architecture that is designed to accelerate scientific computing and data analytics. It includes 4,992 NVIDIA CUDA cores and GPU Boost™ technology. Each K80 provides up to 8.73 teraflops of performance, 24GB of GDDR5 memory, and 480GB of memory bandwidth.
+
+Google TPU
+
+Slightly different are Google’s tensor processing units (TPUs). TPUs are chip or cloud-based, application-specific integrated circuits (ASIC) for deep learning. These units are specifically designed for use with TensorFlow and are available only on Google Cloud Platform.
+
+Each TPU can provide up to 420 teraflops of performance and 128 GB high bandwidth memory (HBM). There are also pod versions available that can provide over 100 petaflops of performance, 32TB HBM, and a 2D toroidal mesh network.
+
+Learn more in our guide about TensorFlow GPUs.
+```
+
+
+
+
 
 ## Setup
 
