@@ -210,11 +210,11 @@ ______________________________________
 ______________________________________
 <br><br>
 
-# Dependencies
+# virtual environment
 
 <br><br>
 
-## Install dependencies from project
+## Example
 ```bash
 git pull https://github.com/SociallyIneptWeeb/AICoverGen
 
@@ -236,6 +236,12 @@ git pull
 python src/download_models.py
 
 # Run UI
+python src/webui.py
+```
+
+To restart the project later again from new terminal just use again:
+```shell
+source AICoverGenENV/bin/activate
 python src/webui.py
 ```
 
