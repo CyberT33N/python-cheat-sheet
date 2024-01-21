@@ -221,7 +221,7 @@ git pull https://github.com/SociallyIneptWeeb/AICoverGen
 cd AICoverGen
 
 # This Project need python 3.9
-pyenv shell 3.9
+pyenv local 3.9
 
 # In order to install the specific dependencies for the project and not system wide we create an virtual environment
 python3 -m venv AICoverGenENV
