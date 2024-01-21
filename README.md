@@ -232,7 +232,11 @@ pip install -r requirements.txt
 
 git pull
 
+# Download models
 python src/download_models.py
+
+# Run UI
+python src/webui.py
 ```
 
 
