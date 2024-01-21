@@ -35,6 +35,11 @@ sudo apt install python3 python3-pip
 
 
 
+
+
+
+
+
 <br><br>
 ______________________________________
 ______________________________________
@@ -79,6 +84,7 @@ sudo apt install python3-pip
 
 
 
+
 <br><br>
 ______________________________________
 ______________________________________
@@ -104,17 +110,13 @@ eval "$(pyenv init -)"
 ```
 
 
-#### Install specific python version
+#### Switch specific python version
 - https://github.com/pyenv/pyenv?tab=readme-ov-file#switch-between-python-versions
 ```shell
 pyenv shell <version> -- select just for current shell session
 pyenv local <version> -- automatically select whenever you are in the current directory (or its subdirectories)
 pyenv global <version> -- select globally for your user account
 ```
-
-
-#### Switch between Python versions
-
 
 
 
@@ -185,6 +187,59 @@ python <filename>.py
 # For Python 3:
 python3 <filename>.py
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+# Dependencies
+
+<br><br>
+
+## Install dependencies from project
+```bash
+git pull https://github.com/SociallyIneptWeeb/AICoverGen
+
+cd AICoverGen
+
+# In order to install the specific dependencies for the project and not system wide we create an virtual environment
+python3 -m venv AICoverGenENV
+source AICoverGenENV/bin/activate
+
+# Install dependencies from this file
+pip install -r requirements.txt
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
