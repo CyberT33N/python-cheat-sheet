@@ -53,13 +53,26 @@ ______________________________________
 
 <br><br>
 
-### Install
+### Install 
+
+<br><br>
+
+#### Ubuntu 23.04 - Python 3.11
 ```shell
-# The version of Anaconda may be different depending on when you are installing`
-curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-sh Miniconda3-latest-Linux-x86_64.sh
-# and follow the prompts. The defaults are generally good.`
+wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+chmod +x Anaconda3-2023.09-0-Linux-x86_64.sh
+bash Anaconda3-2023.09-0-Linux-x86_64.sh
 ```
+
+
+
+
+
+
+
+<br><br>
+<br><br>
+
 
 
 ## pip
@@ -155,10 +168,20 @@ ______________________________________
 
 <br><br>
 
-### Ubuntu
+### Ubuntu 23.04
 ```shell
-- pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+# pip
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+# anaconda
+conda install pytorch torchvision
+conda install pytorch::torchaudio
 ```
+
+
+
+
+
 
 
 
@@ -244,6 +267,74 @@ To restart the project later again from new terminal just use again:
 source AICoverGenENV/bin/activate
 python src/webui.py
 ```
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+# Machine Learning
+
+## Setup
+
+### Ubuntu 23.04
+```shell
+# 1. ----- Install nvidia driver - https://github.com/CyberT33N/linux-cheat-sheet/blob/main/README.md#install--update ----- 
+sudo apt-get purge 'nvidia*'
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt-get update
+sudo apt-get install nvidia-driver-525 nvidia-settings
+sudo reboot
+
+
+
+# 2. ----- install Cuda & cuDNN - https://github.com/CyberT33N/linux-cheat-sheet/blob/main/README.md#cuda--cudnn ----- 
+sudo apt update
+sudo apt install build-essential
+
+# check if it worked
+gcc --version
+g++ --version
+
+sudo apt install nvidia-cuda-toolkit nvidia-cuda-toolkit-gcc nvidia-cudnn
+
+# Check if it worked
+nvcc --version
+
+
+
+# 3. ---- Install python & pip ----
+sudo apt install python3 python3-pip
+
+
+
+# 4. ---- Install pyenv ----
+curl https://pyenv.run | bash
+
+# Add to ~/.bashrc & ~/.zshrc
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# restart shell
+
+
+
+# 5. ---- Install Pytorch ----
+conda install pytorch torchvision
+conda install pytorch::torchaudio
+```
+
 
 
 
