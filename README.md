@@ -229,6 +229,10 @@ source AICoverGenENV/bin/activate
 
 # Install dependencies from this file
 pip install -r requirements.txt
+
+git pull
+
+python src/download_models.py
 ```
 
 
