@@ -288,6 +288,7 @@ ______________________________________
 ## Setup
 
 ### Ubuntu 23.04
+- You need a GPU with more than 4GB RAM. In my case 1050 TI was not enough..
 ```shell
 # 1. ----- Install nvidia driver - https://github.com/CyberT33N/linux-cheat-sheet/blob/main/README.md#install--update ----- 
 sudo apt-get purge 'nvidia*'
