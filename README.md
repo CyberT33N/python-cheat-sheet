@@ -358,6 +358,57 @@ conda install pytorch::torchaudio
 
 
 
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+# printf
+
+## f-strings
+```python
+self.n_cpu = cpu_count()
+print(f"cpu_count(): {self.n_cpu}")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
