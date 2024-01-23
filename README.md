@@ -411,6 +411,163 @@ conda install pytorch::torchaudio
 
 
 
+# gcloud - compute engine
+- **Make always sure to suspend your VM if you do not use it to not waste money**
+
+### guide
+- https://www.youtube.com/watch?v=Tl8esVqEQZU&list=PLgTTUdxnNfyQNKUTYyI-2CL_bXkfprTnk&index=1
+
+
+## 1. Create project
+- https://console.cloud.google.com/projectcreate?
+
+
+## 2. Create VM
+
+### a) Ready VM with everything installed
+- https://medium.com/google-cloud/how-to-run-deep-learning-models-on-google-cloud-platform-in-6-steps-4950a57acfa5
+
+Search for "Deep Learning VM"
+  - Start
+
+Deployment name: deeplearning-1
+Zone: us-central1-c <-- Does not matter
+  - If you get later error "The zone does not have enough resources" try other zone e.g. asia
+
+
+
+Machine type: Check default use -> n1-highmem-2 (2 vCPU, 13GB RAM)
+GPU Type: NVIDIA T4 - 1 CPU
+- Check install NVIDIA GPU Driver
+Framework: TensorFlow 2.13 (CUDA 11.8, Python 3.10)
+
+Uncheck "Access to Jupyter Lab"
+- We use SSH
+
+Boot disk type: Standard Persistent Disk
+Boot disk size: 1000GB
+
+
+
+
+
+### b) Custom VM
+
+ Compute Engine -> VM Instances -> Create Instance
+- https://console.cloud.google.com/compute/instances
+
+Name: deep-learning-1
+Region: us-central1 (lowa) <-- Cheapest
+Zone: us-central1-c <-- Does not matter
+
+GPU: NVIDIA T4 (cheaper) / NVIDIA Tesla K80 (recommended but more expensive)
+Amount GPU: 1
+
+Machine type: n1-highmem-2 (2 vCPU, 13GB RAM)
+
+Boot:
+  - Public Images:
+    - OS: Deep Learning on Linux
+    - Version: Deep Learning VM with CUDA 11.8 M115
+    - Disk Space: 500GB (Maybe 100GB is enough..)
+      - default space type
+
+Firewall:
+- You can keep everything unchecked. If needed you can create an ssh tunnel to port-forward and GUI to your localhost on your host machine. Only enable HTTP&HTTPS Traffic if you want to create access from the internet
+
+```shell
+gcloud compute instances create deep-learning-1 --project=deep-learning-tests-411921 --zone=us-central1-a --machine-type=n1-highmem-2 --network-interface=network-tier=PREMIUM,stack-type=IPV4_ONLY,subnet=default --maintenance-policy=TERMINATE --provisioning-model=STANDARD --service-account=470007060618-compute@developer.gserviceaccount.com --scopes=https://www.googleapis.com/auth/devstorage.read_only,https://www.googleapis.com/auth/logging.write,https://www.googleapis.com/auth/monitoring.write,https://www.googleapis.com/auth/servicecontrol,https://www.googleapis.com/auth/service.management.readonly,https://www.googleapis.com/auth/trace.append --accelerator=count=1,type=nvidia-tesla-t4 --create-disk=auto-delete=yes,boot=yes,device-name=deep-learning-1,image=projects/ml-images/global/images/c0-deeplearning-common-gpu-v20240111-debian-11-py310,mode=rw,size=1000,type=projects/deep-learning-tests-411921/zones/us-central1-a/diskTypes/pd-standard --no-shielded-secure-boot --shielded-vtpm --shielded-integrity-monitoring --labels=goog-ec-src=vm_add-gcloud --reservation-affinity=any
+```
+
+
+
+
+## 3. gcloud CLI
+
+### a) Install
+
+#### Ubuntu 23.04
+```shell
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates gnupg curl sudo
+
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+
+sudo apt-get update && sudo apt-get install google-cloud-cli
+
+# If you get error "The repository 'https://packages.cloud.google.com/apt cloud-sdk InRelease' is not signed.""
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+
+```
+
+
+### b) Create an SSH connection to your machine
+```
+gcloud compute ssh --project deep-learning-tests-411921 --zone asia-east1-c deeplearning-1-vm -- -L 8080:localhost:8080
+```
+
+### c) Jupyter Notebook
+- http://localhost:8080/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
