@@ -436,7 +436,7 @@ Zone: us-central1-c <-- Does not matter
 
 
 
-Machine type: Check default use -> n1-highmem-2 (2 vCPU, 13GB RAM)
+Machine type: n1-highmem-2 (2 vCPU, 13GB RAM) <-- **Will work but for some cases not enough if you can use n1-highmem-2 with 26GB RAM**
 GPU Type: NVIDIA T4 - 1 CPU
 - Check install NVIDIA GPU Driver
 Framework: TensorFlow 2.13 (CUDA 11.8, Python 3.10)
@@ -463,7 +463,7 @@ Zone: us-central1-c <-- Does not matter
 GPU: NVIDIA T4 (cheaper) / NVIDIA Tesla K80 (recommended but more expensive)
 Amount GPU: 1
 
-Machine type: n1-highmem-2 (2 vCPU, 13GB RAM)
+Machine type: n1-highmem-2 (2 vCPU, 13GB RAM) <-- **Will work but for some cases not enough if you can use n1-highmem-2 with 26GB RAM**
 
 Boot:
   - Public Images:
