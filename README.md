@@ -110,6 +110,8 @@ ______________________________________
 ## pyenv
 - https://github.com/pyenv/pyenv?tab=readme-ov-file#installation
 
+<br><br>
+
 ### Install
 ```shell
 curl https://pyenv.run | bash
@@ -122,6 +124,14 @@ eval "$(pyenv init -)"
 # restart shell
 ```
 
+<br><br>
+
+#### Install specific python version
+```shell
+pyenv install 3.9
+```
+
+<br><br>
 
 #### Switch specific python version
 - https://github.com/pyenv/pyenv?tab=readme-ov-file#switch-between-python-versions
@@ -130,7 +140,6 @@ pyenv shell <version> -- select just for current shell session
 pyenv local <version> -- automatically select whenever you are in the current directory (or its subdirectories)
 pyenv global <version> -- select globally for your user account
 ```
-
 
 
 
