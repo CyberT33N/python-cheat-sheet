@@ -410,7 +410,7 @@ conda install pytorch torchvision
 conda install pytorch::torchaudio
 
 # 6. Check if CUDA is working
-- python -c "import torch;print(torch.cuda.is_available())"
+python -c "import torch;print(torch.cuda.is_available())"
 ```
 
 
