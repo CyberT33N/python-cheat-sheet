@@ -437,6 +437,13 @@ conda install pytorch::torchaudio
 
 
 
+
+
+
+
+<br><br>
+
+
 # gcloud - compute engine
 - **Make always sure to suspend your VM if you do not use it to not waste money**
 
