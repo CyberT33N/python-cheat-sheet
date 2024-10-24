@@ -57,6 +57,20 @@ ______________________________________
 
 <br><br>
 
+#### Ubuntu 24.04 - Python 3.11
+```shell
+sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
+
+
+wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+chmod +x Anaconda3-2024.10-1-Linux-x86_64.sh
+bash Anaconda3-2024.10-1-Linux-x86_64.sh
+
+
+```
+
+<br><br>
+
 #### Ubuntu 23.04 - Python 3.11
 ```shell
 wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
