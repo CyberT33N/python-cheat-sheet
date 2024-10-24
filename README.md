@@ -385,28 +385,8 @@ Learn more in our guide about TensorFlow GPUs.
 - You need a GPU with more than 4GB RAM. In my case 1050 TI was not enough..
 ```shell
 # 1. ----- Install nvidia driver - https://github.com/CyberT33N/linux-cheat-sheet/blob/main/README.md#install--update ----- 
-sudo apt-get purge 'nvidia*'
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt-get update
-sudo apt-get install nvidia-driver-525 nvidia-settings
-sudo reboot
-
-
 
 # 2. ----- install Cuda & cuDNN - https://github.com/CyberT33N/linux-cheat-sheet/blob/main/README.md#cuda--cudnn ----- 
-sudo apt update
-sudo apt install build-essential
-
-# check if it worked
-gcc --version
-g++ --version
-
-sudo apt install nvidia-cuda-toolkit nvidia-cuda-toolkit-gcc nvidia-cudnn
-
-# Check if it worked
-nvcc --version
-
-
 
 # 3. ---- Install python & pip ----
 sudo apt install python3 python3-pip
