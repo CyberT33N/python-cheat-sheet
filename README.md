@@ -40,6 +40,41 @@ sudo apt install python3 python3-pip
 
 
 
+
+
+
+
+
+
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+# Start project
+```bash
+# For Python 2:
+python <filename>.py
+
+# For Python 3:
+python3 <filename>.py
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 ______________________________________
 ______________________________________
@@ -181,24 +216,7 @@ ______________________________________
 
 
 # pytorch
-- https://pytorch.org/get-started/locally/
-- PyTorch ist eine mächtige Open-Source-Maschinenlernbibliothek, die von Facebook AI entwickelt wurde. Sie wird besonders für die Implementierung von Deep-Learning-Modellen genutzt. PyTorch bietet dynamisches Rechendefinieren, was bedeutet, dass du Modelle erstellen und ändern kannst, während sie ausgeführt werden.
-
-<br><br>
-
-## Install
-
-<br><br>
-
-### Ubuntu 23.04
-```shell
-# pip
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-
-# anaconda
-conda install pytorch torchvision
-conda install pytorch::torchaudio
-```
+- https://github.com/CyberT33N/pytorch-cheat-sheet/blob/main/README.md
 
 
 
@@ -215,23 +233,6 @@ conda install pytorch::torchaudio
 
 
 
-
-
-
-
-<br><br>
-______________________________________
-______________________________________
-<br><br>
-
-# Start project
-```bash
-# For Python 2:
-python <filename>.py
-
-# For Python 3:
-python3 <filename>.py
-```
 
 
 
