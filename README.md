@@ -46,22 +46,6 @@ sudo apt install python3 python3-pip
 
 
 
-<br><br>
-______________________________________
-______________________________________
-<br><br>
-
-# Start project
-```bash
-# For Python 2:
-python <filename>.py
-
-# For Python 3:
-python3 <filename>.py
-```
-
-
-
 
 
 
@@ -242,6 +226,23 @@ ______________________________________
 
 
 
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+# Start project
+```bash
+# For Python 2:
+python <filename>.py
+
+# For Python 3:
+python3 <filename>.py
+```
+
+
+
+
 
 
 
@@ -308,6 +309,46 @@ deactivate
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+
+
+
+# import
+
+## import local dependency
+```python
+import os
+import torch
+from PIL import Image
+from transformers import AutoProcessor, AutoModelForVision2Seq
+
+# Überprüfe, ob die GPU verfügbar ist
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+if device.type == 'cuda':
+    print("GPU wird verwendet:", torch.cuda.get_device_name(0))
+else:
+    print("GPU nicht verfügbar, CPU wird verwendet.")
+
+# Kosmos-2 Model und Processor laden
+kosmos_path = "/home/user/Projects/ai/resources/transformers/kosmos-2-patch14-224"
+model = AutoModelForVision2Seq.from_pretrained(kosmos_path).to(device)  # Verschiebe das Modell auf die GPU
+processor = AutoProcessor.from_pretrained(kosmos_path)
+```
 
 
 
