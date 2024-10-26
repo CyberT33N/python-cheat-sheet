@@ -255,11 +255,12 @@ ______________________________________
 ______________________________________
 <br><br>
 
-# virtual environment
+# Virtual environment
+- In order to not install dependencies globally but instead specific for your project we create virtual environments
 
 <br><br>
 
-## Example
+## Create env
 ```bash
 git pull https://github.com/SociallyIneptWeeb/AICoverGen
 
@@ -288,6 +289,13 @@ To restart the project later again from new terminal just use again:
 ```shell
 source AICoverGenENV/bin/activate
 python src/webui.py
+```
+
+<br><br>
+
+## Deactivate env
+```shell
+deactivate
 ```
 
 
