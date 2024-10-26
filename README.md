@@ -300,8 +300,14 @@ python src/webui.py
 deactivate
 ```
 
+<br><br>
 
-
+## Install dependency globally
+```shell
+sudo apt install pipx
+pipx install nvitop
+pipx ensurepath
+```
 
 
 
