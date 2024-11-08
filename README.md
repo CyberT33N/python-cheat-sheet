@@ -319,6 +319,67 @@ pipx ensurepath
 
 
 
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+
+# Requirements
+
+<br><br>
+
+## requirements.txt
+Create requirements.txt
+```txt
+accelerate
+argh
+dacite
+demucs
+diffusers==0.9.0
+flask
+flask_cors
+numpy
+pillow>=9.1.0
+plotly
+pydub
+pysoundfile
+scipy
+soundfile
+sox
+streamlit>=1.18.0
+torch
+torchaudio
+torchvision
+transformers
+```
+
+And then run:
+````shell
+python -m pip install -r requirements.txt
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
