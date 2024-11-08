@@ -300,6 +300,34 @@ python src/webui.py
 deactivate
 ```
 
+
+
+
+
+
+
+
+
+
+
+
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+
+
+
+
+
+# Dependencies
+
+## Upgrade dependency
+```
+pip install --upgrade huggingface_hub
+```
+
 <br><br>
 
 ## Install dependency globally
@@ -309,23 +337,6 @@ pipx install nvitop
 pipx ensurepath
 ```
 
-
-
-
-
-
-
-
-
-
-
-<br><br>
-______________________________________
-______________________________________
-<br><br>
-
-
-# Requirements
 
 <br><br>
 
@@ -355,7 +366,7 @@ transformers
 ```
 
 And then run:
-````shell
+```shell
 python -m pip install -r requirements.txt
 ```
 
