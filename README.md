@@ -64,9 +64,12 @@ ______________________________________
 ______________________________________
 <br><br>
 
-# Package manager
+# Environment manager
 
 <br><br>
+
+
+
 
 ## Miniconda
 - https://github.com/CyberT33N/conda-cheat/blob/main/README.md#miniconda
@@ -76,9 +79,19 @@ ______________________________________
 
 
 
+<br><br>
+<br><br>
 
-<br><br>
-<br><br>
+
+## uv
+- https://github.com/CyberT33N/uv-cheat-sheet/blob/main/README.md#ubuntu
+
+
+
+
+
+
+
 <br><br>
 <br><br>
 
@@ -106,6 +119,17 @@ sudo apt install python3-pip
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 <br><br>
 ______________________________________
 ______________________________________
@@ -113,10 +137,16 @@ ______________________________________
 
 # Python manager
 
+
+
+
 <br><br>
 
 ## pyenv
 - https://github.com/pyenv/pyenv?tab=readme-ov-file#installation
+
+
+
 
 <br><br>
 
@@ -148,6 +178,25 @@ pyenv shell <version> -- select just for current shell session
 pyenv local <version> -- automatically select whenever you are in the current directory (or its subdirectories)
 pyenv global <version> -- select globally for your user account
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
