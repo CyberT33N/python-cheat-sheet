@@ -49,6 +49,19 @@ sudo apt install python3 python3-pip
 
 
 
+<br><br>
+______________________________________
+______________________________________
+<br><br>
+
+
+
+
+# Ttype Checker
+- https://github.com/facebook/pyrefly?utm_source=tldrnewsletter
+
+
+
 
 
 
