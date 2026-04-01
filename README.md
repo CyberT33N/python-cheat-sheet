@@ -7,6 +7,16 @@ Python Cheat Sheet with the most needed stuff..
 
 # Install
 
+
+
+## Windows
+- https://www.python.org/downloads/windows/
+
+
+
+
+
+
 <br><br>
 
 ## Ubuntu 23.04
